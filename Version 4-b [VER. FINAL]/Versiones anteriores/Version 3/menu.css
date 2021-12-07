@@ -1,0 +1,139 @@
+/*El sig bloque de codigo lo vamos a usar para deshacernos del margen prederterminado y usar
+TODO el espacio disponible, finalmente aplicaremos el display "grid" a TODA la página*/
+body {
+	margin: 0;
+}
+div#contenedor0{
+	width: 100vw;
+	height: 100vh;
+	/* Esto ES el layout de nuestra página principal */
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 125px 120px 80px 100vh 100vh 1fr;
+	/* Despegamos las "cajas" de los bordes y añadimos un poco de relleno a los lados a cada
+	caja para centrar LAS "cajas" */
+	gap: 10px;
+	/*padding: 10px;*/
+	box-sizing: border-box;
+	background-color: #FFFFFF;
+
+}
+
+/*Componentes del encabezado*/
+div#encabezado{
+
+	padding: 10px;
+	
+	/* Estas lineas de aqui son para hacer que esta "caja" especificamente ocupe TODA la fila
+	que le corresponde (si había otra div en esa fila se recorre a la sig) */
+	grid-column-start: 1;
+	grid-column-end: 4;
+	background-color: #C39B77;
+}
+div#NavBar{
+	width: 100%;
+	/*height: 60vh;*/
+	/* Con el padding que tiene "contenedor0" ya tengo el margen que quiero, asi que la línea
+	de arriba ya no es necesaria */
+	display: flex;
+	justify-content: space-between;
+	/* Esta linea manda el logo a la izquierda y las secciones a la derecha, perfecto. */
+	align-items: center;
+	position: absolute;
+}
+.Secciones ul li{
+	/* Las secciones están originalmente escritas como una lista...vertical, vamos a cambiarla
+	a una horizontal*/
+	display: inline-block;
+	padding: 0 50px;
+	cursor: pointer;
+	font-size: 30px;
+	font-weight: 1000;
+	line-height: 80px;
+	align-items: center;
+	margin-top: -10px;
+
+	font-family: 'Segoe UI Semibold';
+}
+/*Componentes para el espacio del titulo*/
+div#titulo{
+	padding: 10px;
+	border: 1px solid #000000;
+	/* Hacemos practicamente lo mismo que en el encabezado */
+	grid-column-start: 1;
+	grid-column-end: 4;
+
+	font-size: 60px;
+	font-family: 'Segoe UI';
+	text-align: center;
+}
+
+/*Componentes para mostrar las comidas del menu en su respectivo lugar*/
+div#menuComida2{
+	padding: 10px;
+	border: 1px solid #000000;
+	grid-row-start: 4;
+	grid-row-end: span 2;
+}
+div#divmenuComida{
+	background-color: #FFFFFF;
+}
+p#menuComida{
+	font-family: 'CabinSketch';
+	font-size: 25px;
+	text-align: center;
+}
+img#fotoMenuComida1{
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+div#divmenuComida2{
+	padding: 10px;
+	background-color: #F4DFC0;
+	margin-left: 89px;
+	margin-right: 89px;
+	margin-top: -10px;	
+
+}
+p#subTXTfotomenuComida1{
+	font-family: 'CabinSketch';
+	font-size: 20px;
+	color: black;
+	text-align: center;
+}
+/* Componentes solo para el texto "desayunos" */
+div#desayunos{
+	font-family: 'CabinSketch';
+	font-size: 50px;
+	text-align: center;
+	padding: 10px;
+	border: 1px solid #000000;
+}
+/* Componentes solo para el texto "comidas" */
+div#comidas{
+	font-family: 'CabinSketch';
+	font-size: 50px;
+	text-align: center;
+	padding: 10px;
+	border: 1px solid #000000;
+}
+
+/* Componentes solo para el texto "cenas" */
+div#cenas{
+	font-family: 'CabinSketch';
+	font-size: 50px;
+	text-align: center;
+	padding: 10px;
+	border: 1px solid #000000;
+}
+
+
+/* Componentes para el pie de página */
+div#PPag{
+	grid-column-start: 1;
+	grid-column-end: span 3;
+	padding: 10px;
+	
+	background-color: #C39B77;
+}
